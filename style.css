@@ -1,0 +1,33 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: -apple-system, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 80px;
+    height: 38px;
+}
+
+#mJewelNav {
+    margin: auto;
+    max-width: 380px;
+}
+
+#header .jewel a > div {
+    height: 38px;
+    position: relative;
+    top: -3px;
+}
+
+#root {
+    padding-top: 38px;
+}
