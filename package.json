@@ -13,10 +13,8 @@
   "scripts": {
     "test": "xo",
     "start": "electron .",
-    "build": "npm run build:macos ",
-    "build:macos": "electron-packager . --overwrite --asar --out=dist --ignore='^media$' --platform=darwin --arch=x64 --icon=static/Icon.icns",
-    "build:linux": "electron-packager . --overwrite --out=dist --ignore='^media$' --platform=linux --arch=x64",
-    "build:windows": "electron-packager . --overwrite --asar --out=dist --ignore='^media$' --platform=win32 --arch=ia32 --icon=static/Icon.ico --version-string.ProductName=$npm_package_productName"
+    "build": "npm run build:macos",
+    "build:macos": "electron-packager . --overwrite --asar --out=dist --ignore='^media$' --platform=darwin --arch=x64 --icon=static/Icon.icns"
   },
   "files": [
     "index.js",
