@@ -8,6 +8,12 @@ body {
     font-family: -apple-system, 'Helvetica Neue', Helvetica, sans-serif;
 }
 
+body.sideShowing, body.sideShowing #viewport {
+    height: 1vh !important;
+    min-height: 1vh !important;
+    max-height: 1vh !important;
+}
+
 #header {
     position: fixed;
     top: 0;
@@ -17,12 +23,43 @@ body {
     height: 38px;
 }
 
+#modalDialog .mFuturePageHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 5px 80px;
+    height: 38px;
+}
+
+#modalDialog .modalDialogView {
+    padding-top: 38px;
+}
+
+.jewel .flyout {
+    margin-top: 38px !important;
+    bottom: 0;
+    overflow: auto;
+}
+
+.jewel .flyout #locale-selector {
+    display: none;
+}
+
+#m-chrome-graph-search ._1_oa._4gvh._4gvl._1w-s._1_oc._1_od._bmx {
+    display: none;
+}
+
+#m-chrome-graph-search ._tn0:not(:first-child) {
+    display: none;
+}
+
 #mJewelNav {
     margin: auto;
     max-width: 380px;
 }
 
-#header .jewel a > div {
+#header .jewel > a > div {
     height: 38px;
     position: relative;
     top: -3px;
