@@ -21,17 +21,27 @@ function onClosed() {
 function createMainWindow() {
     const win = new electron.BrowserWindow({
         title: app.getName(),
-        width: 800,
-        height: 600,
+        show: false,
+        width: 780,
+        height: 540,
+        minWidth: 400,
+        minHeight: 540,
         titleBarStyle: 'hidden-inset',
+        autoHideMenuBar: true,
         webPreferences: {
-            preload: path.join(__dirname, 'preload.js'),
+            preload: path.join(__dirname, 'browser.js'),
             nodeIntegration: false
         }
     });
 
     win.loadURL(`https://m.facebook.com`);
+
+
     win.on('closed', onClosed);
+
+    win.on('page-title-updated', e => {
+        e.preventDefault();
+    });
 
     return win;
 }
@@ -51,8 +61,14 @@ app.on('activate', () => {
 app.on('ready', () => {
     mainWindow = createMainWindow();
     const page = mainWindow.webContents;
+
     page.on('dom-ready', () => {
         page.insertCSS(fs.readFileSync(path.join(__dirname, 'style.css'), 'utf8'));
         mainWindow.show();
     });
+
+    page.on('new-window', (e, url) => {
+        e.preventDefault();
+        electron.shell.openExternal(url);
+    })
 });
