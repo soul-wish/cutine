@@ -11,6 +11,7 @@ require('electron-debug')();
 
 // prevent window being garbage collected
 let mainWindow;
+let shouldIReallyQuit = false;
 
 function onClosed() {
     // dereference the window
@@ -36,8 +37,14 @@ function createMainWindow() {
 
     win.loadURL(`https://m.facebook.com`);
 
-
     win.on('closed', onClosed);
+
+    win.on('close', (e) => {
+        if (!shouldIReallyQuit) {
+            e.preventDefault();
+            app.hide();
+        }
+    })
 
     win.on('page-title-updated', e => {
         e.preventDefault();
@@ -45,12 +52,6 @@ function createMainWindow() {
 
     return win;
 }
-
-app.on('window-all-closed', () => {
-    if (process.platform !== 'darwin') {
-        app.quit();
-    }
-});
 
 app.on('activate', () => {
     if (!mainWindow) {
@@ -71,4 +72,12 @@ app.on('ready', () => {
         e.preventDefault();
         electron.shell.openExternal(url);
     })
+});
+
+app.on('activate', () => {
+    mainWindow.show();
+});
+
+app.on('before-quit', (e) => {
+    shouldIReallyQuit = true;
 });
