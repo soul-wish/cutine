@@ -1,19 +1,11 @@
-html,
-body {
-    padding: 0;
-    margin: 0;
-}
-
-body {
-    font-family: -apple-system, 'Helvetica Neue', Helvetica, sans-serif;
-}
-
+/* fix profile settings view */
 body.sideShowing, body.sideShowing #viewport {
     height: 1vh !important;
     min-height: 1vh !important;
     max-height: 1vh !important;
 }
 
+/* make header bar more compact and fixed \m/ */
 #header {
     position: fixed;
     top: 0;
@@ -22,7 +14,17 @@ body.sideShowing, body.sideShowing #viewport {
     padding: 0 80px;
     height: 38px;
 }
+#mJewelNav {
+    margin: auto;
+    max-width: 380px;
+}
+#header .jewel > a > div {
+    height: 38px;
+    position: relative;
+    top: -3px;
+}
 
+/* make additional header more compact and fixed (on some views) */
 #modalDialog .mFuturePageHeader {
     position: fixed;
     top: 0;
@@ -32,39 +34,30 @@ body.sideShowing, body.sideShowing #viewport {
     height: 38px;
 }
 
+/* the right padding for modal views */
+#root {
+    padding-top: 38px;
+}
 #modalDialog .modalDialogView {
     padding-top: 38px;
 }
 
+/* the right styles for main layout*/
 .jewel .flyout {
     margin-top: 38px !important;
     bottom: 0;
     overflow: auto;
 }
 
+/* hide locale selector from settings view (some styles issues) */
 .jewel .flyout #locale-selector {
     display: none;
 }
 
+/* hide suggestions from search view */
 #m-chrome-graph-search ._1_oa._4gvh._4gvl._1w-s._1_oc._1_od._bmx {
     display: none;
 }
-
 #m-chrome-graph-search ._tn0:not(:first-child) {
     display: none;
-}
-
-#mJewelNav {
-    margin: auto;
-    max-width: 380px;
-}
-
-#header .jewel > a > div {
-    height: 38px;
-    position: relative;
-    top: -3px;
-}
-
-#root {
-    padding-top: 38px;
 }
