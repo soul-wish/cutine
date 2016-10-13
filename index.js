@@ -3,6 +3,7 @@ const path = require('path');
 const fs = require('fs');
 
 const electron = require('electron');
+const appMenu = require('./menu');
 
 const app = electron.app;
 
@@ -35,7 +36,7 @@ function createMainWindow() {
         }
     });
 
-    win.loadURL(`https://m.facebook.com`);
+    win.loadURL('https://m.facebook.com');
 
     win.on('closed', onClosed);
 
@@ -44,7 +45,7 @@ function createMainWindow() {
             e.preventDefault();
             app.hide();
         }
-    })
+    });
 
     win.on('page-title-updated', e => {
         e.preventDefault();
@@ -60,6 +61,7 @@ app.on('activate', () => {
 });
 
 app.on('ready', () => {
+    electron.Menu.setApplicationMenu(appMenu);
     mainWindow = createMainWindow();
     const page = mainWindow.webContents;
 
@@ -71,13 +73,13 @@ app.on('ready', () => {
     page.on('new-window', (e, url) => {
         e.preventDefault();
         electron.shell.openExternal(url);
-    })
+    });
 });
 
 app.on('activate', () => {
     mainWindow.show();
 });
 
-app.on('before-quit', (e) => {
+app.on('before-quit', () => {
     shouldIReallyQuit = true;
 });
