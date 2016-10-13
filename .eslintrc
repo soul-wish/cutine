@@ -17,6 +17,6 @@
         "no-underscore-dangle": [0],
         "no-unused-vars": 2,
         "no-use-before-define": 2,
-        "space-after-keywords": 1
+        "keyword-spacing": 1
     }
 }
