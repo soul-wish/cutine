@@ -1,4 +1,4 @@
-window.__devtron = {require: require, process: process}
+window.__devtron = {require: require, process: process};
 const Mousetrap = require('mousetrap');
 const $ = document.querySelector.bind(document);
 
