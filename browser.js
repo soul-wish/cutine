@@ -1,10 +1,19 @@
 window.__devtron = {require: require, process: process};
 const Mousetrap = require('mousetrap');
+const elementReady = require('element-ready');
 const $ = document.querySelector.bind(document);
 
 function registerShortcuts() {
+    Mousetrap.bind('m', () => {
+        $('a[href^="/messages"]').click();
+        elementReady('a[data-store*="messages"]').then(element => element.click());
+        elementReady('#m-messages-touch-composer-form a._5jby').then(element => element.click());
+        elementReady('input[data-sigil="xm-tokenizer-input"]').then(element => element.focus());
+        return false;
+    });
+
     Mousetrap.bind('g h', () => {
-        $('a[href^="/home.php"]').click();
+        $('a[href^="/home"]').click();
     });
 
     Mousetrap.bind('g f', () => {
@@ -16,7 +25,7 @@ function registerShortcuts() {
     });
 
     Mousetrap.bind('g n', () => {
-        $('a[href^="/notifications.php"]').click();
+        $('a[href^="/notifications"]').click();
     });
 
     Mousetrap.bind('g s', () => {
