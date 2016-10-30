@@ -25,7 +25,7 @@ body.sideShowing, body.sideShowing #viewport {
 }
 
 /* make additional header more compact and fixed (on some views) */
-#modalDialog .mFuturePageHeader {
+#root .mFuturePageHeader, #modalDialog .mFuturePageHeader {
     position: fixed;
     top: 0;
     left: 0;
@@ -51,6 +51,11 @@ body.sideShowing, body.sideShowing #viewport {
 
 /* hide locale selector from settings view (some styles issues) */
 .jewel .flyout #locale-selector {
+    display: none;
+}
+
+/* hide "People You May Know" section */
+._55wp {
     display: none;
 }
 
