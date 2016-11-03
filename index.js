@@ -40,7 +40,7 @@ function createMainWindow() {
 
     win.on('closed', onClosed);
 
-    win.on('close', (e) => {
+    win.on('close', e => {
         if (!shouldIReallyQuit) {
             e.preventDefault();
             app.hide();

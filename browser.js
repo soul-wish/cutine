@@ -1,6 +1,7 @@
-window.__devtron = {require: require, process: process};
+window.__devtron = {require, process};
 const Mousetrap = require('mousetrap');
 const elementReady = require('element-ready');
+
 const $ = document.querySelector.bind(document);
 
 function registerShortcuts() {
@@ -37,14 +38,14 @@ function registerShortcuts() {
     });
 
     Mousetrap.bind(['backspace', 'left'], () => {
-		window.history.back();
-	});
+        window.history.back();
+    });
 
     Mousetrap.bind('right', () => {
-		window.history.forward();
-	});
+        window.history.forward();
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	registerShortcuts();
+    registerShortcuts();
 });
