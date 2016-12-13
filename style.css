@@ -55,7 +55,7 @@ body.sideShowing, body.sideShowing #viewport {
 }
 
 /* hide "People You May Know" section */
-#u_d_4 {
+#u_d_4, ._d2r {
     display: none;
 }
 
@@ -64,5 +64,10 @@ body.sideShowing, body.sideShowing #viewport {
     display: none;
 }
 #m-chrome-graph-search ._tn0:not(:first-child) {
+    display: none;
+}
+
+/* Hide some broken scroll areas */
+.scrollArea {
     display: none;
 }
