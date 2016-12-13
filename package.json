@@ -2,7 +2,7 @@
   "name": "cutine",
   "productName": "Cutine",
   "version": "0.0.0",
-  "description": "My beautiful app",
+  "description": "Simple Facebook Client for macOS",
   "license": "MIT",
   "repository": "soul-wish/cutine",
   "author": {
@@ -26,15 +26,15 @@
     "electron"
   ],
   "dependencies": {
-    "electron-debug": "^1.0.0",
+    "electron-debug": "^1.1.0",
     "element-ready": "^0.2.0",
     "mousetrap": "^1.6.0"
   },
   "devDependencies": {
     "devtron": "^1.4.0",
-    "electron": "^1.4.4",
-    "electron-packager": "^8.1.0",
-    "xo": "^0.17.0"
+    "electron": "^1.4.12",
+    "electron-packager": "^8.4.0",
+    "xo": "^0.17.1"
   },
   "xo": {
     "esnext": true,
