@@ -1,8 +1,8 @@
 /* fix profile settings view */
 body.sideShowing, body.sideShowing #viewport {
-    height: 1vh !important;
-    min-height: 1vh !important;
-    max-height: 1vh !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    max-height: 100vh !important;
 }
 
 /* make header bar more compact and fixed \m/ */
@@ -34,7 +34,7 @@ body.sideShowing, body.sideShowing #viewport {
     height: 38px;
 }
 
-/* the right padding for modal views */
+/* correct padding for modal views */
 #root {
     padding-top: 38px;
 }
@@ -42,7 +42,7 @@ body.sideShowing, body.sideShowing #viewport {
     padding-top: 38px;
 }
 
-/* the right styles for main layout*/
+/* correct styles for main layout*/
 .jewel .flyout {
     margin-top: 38px !important;
     bottom: 0;
@@ -60,10 +60,10 @@ body.sideShowing, body.sideShowing #viewport {
 }
 
 /* hide suggestions from search view */
-#m-chrome-graph-search ._1_oa._4gvh._4gvl._1w-s._1_oc._1_od._bmx {
+#m\:chrome\:schedulable-graph-search ._1_oa._4gvh._4gvl._1w-s._1_oc._1_od._bmx {
     display: none;
 }
-#m-chrome-graph-search ._tn0:not(:first-child) {
+#m\:chrome\:schedulable-graph-search ._tn0:not(:first-child) {
     display: none;
 }
 
