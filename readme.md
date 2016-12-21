@@ -20,6 +20,7 @@ When closing the window, the app will continue running in the background, in the
 
 ### Keyboard shortcuts
 
+- New post: <kbd>n</kbd>
 - New message: <kbd>m</kbd>
 - Go to Home: <kbd>g</kbd> <kbd>h</kbd>
 - Go to Friends: <kbd>g</kbd> <kbd>f</kbd>
