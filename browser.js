@@ -5,6 +5,13 @@ const elementReady = require('element-ready');
 const $ = document.querySelector.bind(document);
 
 function registerShortcuts() {
+    Mousetrap.bind('n', () => {
+        if (document.URL !== 'https://m.facebook.com/home.php') {
+            $('a[href^="/home"]').click();
+        }
+        elementReady('textarea[name="xc_message"').then(element => element.focus());
+    });
+
     Mousetrap.bind('m', () => {
         $('a[href^="/messages"]').click();
         elementReady('a[data-store*="messages"]').then(element => element.click());
