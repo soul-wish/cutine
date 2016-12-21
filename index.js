@@ -15,8 +15,6 @@ let mainWindow;
 let shouldIReallyQuit = false;
 
 function onClosed() {
-    // dereference the window
-    // for multiple windows store them in an array
     mainWindow = null;
 }
 
