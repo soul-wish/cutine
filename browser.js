@@ -4,12 +4,18 @@ const elementReady = require('element-ready');
 
 const $ = document.querySelector.bind(document);
 
+const homePageUrls = [
+    'https://m.facebook.com/',
+    'https://m.facebook.com/home.php'
+];
+
 function registerShortcuts() {
     Mousetrap.bind('n', () => {
-        if (document.URL !== 'https://m.facebook.com/home.php') {
+        if (!homePageUrls.includes(document.URL)) {
             $('a[href^="/home"]').click();
         }
         elementReady('textarea[name="xc_message"').then(element => element.focus());
+        return false;
     });
 
     Mousetrap.bind('m', () => {
