@@ -1,7 +1,7 @@
 {
   "name": "cutine",
   "productName": "Cutine",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Simple Facebook Client for macOS",
   "license": "MIT",
   "repository": "soul-wish/cutine",
